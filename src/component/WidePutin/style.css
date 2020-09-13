@@ -1,3 +1,27 @@
 #widePutinGif {
     width: 100%;
 }
+
+h1, h2, h3 {
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+}
+
+h1 {
+    font-size: 100px;
+    top: 90px;
+}
+
+h2 {
+    font-size: 70px;
+    font-weight: normal;
+    top: 200px;
+}
+
+h3 {
+    font-size: 15px;
+    top: 600px;
+}

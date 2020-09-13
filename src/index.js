@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import LandingPage from './view/LandingPage/LandingPage';
 import * as serviceWorker from './serviceWorker';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <div className="container">
+      <Route exact path="/" component={LandingPage} />
+    </div>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
