@@ -10,3 +10,9 @@
     animation-iteration-count: infinite;
 }
 
+@media only screen and (max-width: 576px) {
+    #cubesatImg {
+        margin-top: 50px;
+        max-width: 60%;
+    }
+}
