@@ -1,0 +1,12 @@
+@keyframes subtleRotation {
+    0%   {transform: rotate(0deg)}
+    50%  {transform: rotate(5deg)}
+    100% {transform: rotate(0deg)}
+}
+
+#cubesatImg {
+    animation-name: subtleRotation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
