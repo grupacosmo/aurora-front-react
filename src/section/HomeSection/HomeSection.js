@@ -5,13 +5,24 @@ import Title from "antd/lib/typography/Title";
 import cubesat from "../../assets/img/cubesat.svg";
 import "./cubesat.css"
 import "./style.css"
+import Star from "../../component/Star/Star";
 
 const {Content} = Layout;
 
 export default function HomeSection() {
+
+  let stars = [];
+  for (let i = 0; i < 50; i++) {
+    const x = Math.floor(Math.random() * 100);
+    const y = Math.floor(Math.random() * 100);
+    const opacity = Math.random() * 0.5;
+    stars.push(<Star x={x} y={y} opacity={opacity} id={`star${i}`} key={i} />);
+  }
+
   return (
     <Layout id="homeSection">
       <Content style={{backgroundColor: "#1f1f1f", color: "white"}}>
+        <div className="starsContainer">{stars.map(star => star)}</div>
         <div className="reflection" style={{width: "300px", height: "300px"}} />
         <div className="reflection" style={{width: "400px", height: "400px"}} />
         <div className="reflection" style={{width: "500px", height: "500px"}} />
