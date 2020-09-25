@@ -12,6 +12,9 @@ export default function HomeSection() {
   return (
     <Layout id="homeSection">
       <Content style={{backgroundColor: "#1f1f1f", color: "white"}}>
+        <div className="reflection" style={{width: "300px", height: "300px"}} />
+        <div className="reflection" style={{width: "400px", height: "400px"}} />
+        <div className="reflection" style={{width: "500px", height: "500px"}} />
         <Row align="middle" style={{padding: "100px 5px", textAlign: "center"}}>
           <Col span={24} sm={14} md={12}>
             <div style={{textAlign: "left", display: "inline-block"}}>
