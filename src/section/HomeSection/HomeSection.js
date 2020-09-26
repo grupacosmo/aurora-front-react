@@ -13,11 +13,14 @@ const {Content} = Layout;
 export default function HomeSection() {
 
   let stars = [];
-  for (let i = 0; i < 50; i++) {
+  const starsNumber = 50;
+  for (let i = 0; i < starsNumber; i++) {
+    // get random coordinates, opacity and size
     const x = Math.floor(Math.random() * 100);
     const y = Math.floor(Math.random() * 100);
     const opacity = Math.random() * 0.5;
-    stars.push(<Star x={x} y={y} opacity={opacity} id={`star${i}`} key={i} />);
+    const size = Math.random() * 2 + 1;
+    stars.push(<Star x={x} y={y} opacity={opacity} id={`star${i}`} size={size} key={i} />);
   }
 
   return (
