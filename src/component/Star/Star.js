@@ -20,26 +20,32 @@ function getMaxOpacity(opacity) {
 
 export default function Star(props) {
 
-  let {y, x, opacity, id} = props;
+  const {y, id} = props;
 
-  const maxOpacity = getMaxOpacity(opacity);
-  const minOpacity = getMinOpacity(opacity);
-  const opacityStep = Math.random() * 0.0002 + 0.0006;
-  let opacityDirection = Math.random() >= 0.5 ? opacityStep : -opacityStep;
-
-  opacity = Math.random() * OPACITY_RANGE * 2 - OPACITY_RANGE;
+  const size = Math.random() + 1;
 
   const style = {
     position: "absolute",
-    padding: "1px",
+    zIndex: 0,
+    width: `${size}px`,
+    height: `${size}px`,
     borderRadius: "100%",
     backgroundColor: "white",
-    left: x + "%",
+    left: props.x + "%",
     top: y + "%",
-    opacity: opacity
+    opacity: props.opacity
   };
 
   useEffect(() => {
+    let {x, opacity} = props;
+
+    const maxOpacity = getMaxOpacity(opacity);
+    const minOpacity = getMinOpacity(opacity);
+    const opacityStep = Math.random() * 0.0002 + 0.0006;
+    let opacityDirection = Math.random() >= 0.5 ? opacityStep : -opacityStep;
+
+    opacity = Math.random() * OPACITY_RANGE * 2 - OPACITY_RANGE;
+
     setInterval(() => {
       x = x - 0.003;
       if (x < 0) {
@@ -50,8 +56,7 @@ export default function Star(props) {
       if (opacity <= minOpacity) {
         opacity = minOpacity;
         opacityDirection = opacityStep;
-      }
-      else if (opacity >= maxOpacity) {
+      } else if (opacity >= maxOpacity) {
         opacity = maxOpacity;
         opacityDirection = -opacityStep;
       }

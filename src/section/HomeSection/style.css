@@ -35,11 +35,3 @@
         font-size: 60px !important;
     }
 }
-
-#homeSection .reflection {
-    position: absolute;
-    background: rgba(255,255,255,0.002);
-    border-radius: 0 100% 0 0;
-    bottom: -100px;
-    left: 0;
-}
