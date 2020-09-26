@@ -1,8 +1,9 @@
 @keyframes blink {
-    50% {background-color: #262626}
+    50% {background-color: #262626; box-shadow: 0 0 5px 0 #262626;}
 }
 
 .star {
+    box-shadow: 0 0 5px 0 rgba(255,255,255,1);
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-name: blink;
