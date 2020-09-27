@@ -1,7 +1,7 @@
 #tileContainer{
     text-align: center;
     padding: 50px;
-    transition: box-shadow 0.4s,-webkit-box-shadow 0.4s,-moz-box-shadow 0.4s;
+    transition: background-color 0.4s, box-shadow 0.4s,-webkit-box-shadow 0.4s,-moz-box-shadow 0.4s;
 }
 #tileContainer:hover{
     background-color: white;
