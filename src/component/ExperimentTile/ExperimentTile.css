@@ -1,11 +1,23 @@
-#tileContainer{
+#tileContainer {
     text-align: center;
     padding: 50px;
-    transition: background-color 0.4s, box-shadow 0.4s,-webkit-box-shadow 0.4s,-moz-box-shadow 0.4s;
+    transition: background-color 0.4s, box-shadow 0.4s, -webkit-box-shadow 0.4s, -moz-box-shadow 0.4s;
 }
-#tileContainer:hover{
+
+#tileContainer:hover {
     background-color: white;
-    -webkit-box-shadow: 14px 14px 25px 0px rgba(0,0,0,0.35);
-    -moz-box-shadow: 14px 14px 25px 0px rgba(0,0,0,0.35);
-    box-shadow: 14px 14px 25px 0px rgba(0,0,0,0.35);
+    -webkit-box-shadow: 14px 14px 25px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 14px 14px 25px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 14px 14px 25px 0px rgba(0, 0, 0, 0.35);
+}
+
+#tileContainer p {
+    font-size: 14px;
+}
+
+#tileContainer h2 {
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 5px;
 }
