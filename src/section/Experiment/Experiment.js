@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "./Experiment.css"
 import ExperimentTile from "../../component/ExperimentTile/ExperimentTile";
 import {Row, Col} from 'antd';
@@ -8,22 +8,26 @@ const tileData = [
     {
         icon: faSitemap,
         title: "Architektura",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        translate:"-"
     },
     {
         icon: faSatellite,
         title: "Zasilanie",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        translate:""
     },
     {
         icon: faSatelliteDish,
         title: "Komunikacja",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        translate:"-"
     },
     {
         icon: faRobot,
         title: "Sztuczna Inteligencja",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        translate:""
     }
 ]
 
@@ -31,10 +35,14 @@ const Experiment = () => {
     const [isRendered, setIsRendered] = useState(false)
     const [opacity, setOpacity] = useState(0)
     const [translate, setTranslate] = useState("100px")
-
-    const titleScrollHeight = 1 //Będzie to wysokość od której tytuł bedą się pojawiać
+    const myRef = useRef();
 
     useEffect(() => {
+        const {y} = myRef.current.getBoundingClientRect()
+
+        //Będzie to wysokość od której tytuł bedą się pojawiać
+        const titleScrollHeight = y - window.innerHeight + 50 + window.scrollY
+
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
             if (currentScrollY > titleScrollHeight && !isRendered) {
@@ -50,7 +58,7 @@ const Experiment = () => {
         }
         window.addEventListener("scroll", handleScroll, {passive: true});
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [isRendered])
+    }, [isRendered,myRef])
 
     const style = {
         opacity: opacity,
@@ -60,7 +68,8 @@ const Experiment = () => {
 
     return (
         <div id="mainDiv">
-            <div id="titleContainer" style={style}>
+            <div style={{height:1000}}></div>
+            <div id="titleContainer" style={style} ref={myRef}>
                 <Row>
                     <Col span={24}>
                         <h1 id="title">Experymenty Aurory</h1>
@@ -76,16 +85,16 @@ const Experiment = () => {
                     <div id="tilesContainer">
                         <Row gutter={[32, 24]}>
                             <Col span={12} className="gutter-row">
-                                <ExperimentTile translate={"-"} data={tileData[0]}/>
+                                <ExperimentTile data={tileData[0]}/>
                             </Col>
                             <Col span={12} className="gutter-row">
-                                <ExperimentTile translate={""} data={tileData[1]}/>
+                                <ExperimentTile data={tileData[1]}/>
                             </Col>
                             <Col span={12} className="gutter-row">
-                                <ExperimentTile translate={"-"} data={tileData[2]}/>
+                                <ExperimentTile data={tileData[2]}/>
                             </Col>
                             <Col span={12} className="gutter-row">
-                                <ExperimentTile translate={""} data={tileData[3]}/>
+                                <ExperimentTile data={tileData[3]}/>
                             </Col>
                         </Row>
                     </div>
