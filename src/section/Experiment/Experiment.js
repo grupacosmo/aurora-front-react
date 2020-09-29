@@ -68,7 +68,7 @@ const Experiment = () => {
 
     return (
         <div id="mainDiv">
-            <div style={{height:1000}}></div>
+            <div style={{height:1000}}></div> {/* Div do skasowania, stworzony by obserowawać animacje*/}
             <div id="titleContainer" style={style} ref={myRef}>
                 <Row>
                     <Col span={24}>
@@ -81,19 +81,19 @@ const Experiment = () => {
                 </Row>
             </div>
             <Row>
-                <Col span={18} offset={3}>
+                <Col xl={{span:18, offset:3}} sm={{span:22, offset:1}}>
                     <div id="tilesContainer">
                         <Row gutter={[32, 24]}>
-                            <Col span={12} className="gutter-row">
+                            <Col md={{span: 12}} className="gutter-row">
                                 <ExperimentTile data={tileData[0]}/>
                             </Col>
-                            <Col span={12} className="gutter-row">
+                            <Col md={{span: 12}} className="gutter-row">
                                 <ExperimentTile data={tileData[1]}/>
                             </Col>
-                            <Col span={12} className="gutter-row">
+                            <Col md={{span: 12}} className="gutter-row">
                                 <ExperimentTile data={tileData[2]}/>
                             </Col>
-                            <Col span={12} className="gutter-row">
+                            <Col md={{span: 12}} className="gutter-row">
                                 <ExperimentTile data={tileData[3]}/>
                             </Col>
                         </Row>

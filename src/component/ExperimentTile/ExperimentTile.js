@@ -42,7 +42,7 @@ const ExperimentTile = (props) => {
     return (
         <div id="tileContainer" ref={myRef} style={style}>
             <FontAwesomeIcon style={{fontSize: 80,color:"#22267b"}} icon={props.data.icon}/>
-            <h2>{props.data.title}</h2>
+            <h2 className="TitleTile">{props.data.title}</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue facilisis augue, eu consequat magna
                 rhoncus in. Etiam tincidunt eros vitae ultricies efficitur. Maecenas varius vitae dui vehicula dapibus.
                 Vivamus a finibus odio, eget ultrices lectus. Nam nibh eros, consectetur a nulla vel, luctus venenatis
