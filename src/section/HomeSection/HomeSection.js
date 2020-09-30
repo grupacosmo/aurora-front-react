@@ -27,7 +27,7 @@ export default function HomeSection() {
     <Layout id="homeSection">
       <Content style={{backgroundColor: "#1f1f1f", color: "white"}}>
         <Row>
-          <Col>
+          <Col span={24}>
             <div className="reflection" />
             <div className="reflection" />
             <div className="reflection" />
