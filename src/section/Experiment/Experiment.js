@@ -68,7 +68,6 @@ const Experiment = () => {
 
     return (
         <div id="mainDiv">
-            <div style={{height:1000}}></div> {/* Div do skasowania, stworzony by obserowawać animacje*/}
             <div id="titleContainer" style={style} ref={myRef}>
                 <Row>
                     <Col span={24}>
