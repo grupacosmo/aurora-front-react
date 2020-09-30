@@ -1,5 +1,4 @@
 @keyframes blink {
-    /*50% {background-color: #262626; box-shadow: 0 0 5px 0 #262626;}*/
     50% {opacity: 0}
 }
 
