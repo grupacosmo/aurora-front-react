@@ -21,6 +21,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #tilesContainer {
     margin-top: 50px;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #title {
@@ -36,6 +39,11 @@ h1, h2, h3, h4, h5, h6 {
     #title{
         font-size: 40px;
     }
+
+    #tilesContainer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -45,6 +53,11 @@ h1, h2, h3, h4, h5, h6 {
 
     #mainDiv p{
         font-size: 12px;
+    }
+
+    #tilesContainer {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

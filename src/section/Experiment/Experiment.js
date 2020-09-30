@@ -83,7 +83,7 @@ const Experiment = () => {
             <Row>
                 <Col xl={{span:18, offset:3}} sm={{span:22, offset:1}}>
                     <div id="tilesContainer">
-                        <Row gutter={[32, 24]}>
+                        <Row gutter={[{sm: 32}, 24]}>
                             <Col md={{span: 12}} className="gutter-row">
                                 <ExperimentTile data={tileData[0]}/>
                             </Col>

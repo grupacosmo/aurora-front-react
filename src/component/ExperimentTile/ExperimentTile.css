@@ -22,12 +22,37 @@
     margin-top: 5px;
 }
 
-@media (max-width: 350px) {
+.icon{
+    font-size: 80px;
+    color: #22267b;
+}
+
+@media (max-width: 400px) {
     .TitleTile{
         font-size: 25px;
     }
 
     #tileContainer p{
         font-size: 12px;
+    }
+
+    .icon{
+        font-size: 60px;
+        color: #22267b;
+    }
+}
+
+@media (max-width: 350px) {
+    .TitleTile{
+        font-size: 18px;
+    }
+
+    #tileContainer p{
+        font-size: 12px;
+    }
+
+    .icon{
+        font-size: 50px;
+        color: #22267b;
     }
 }
