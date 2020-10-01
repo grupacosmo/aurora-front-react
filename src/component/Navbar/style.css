@@ -1,0 +1,25 @@
+.navbar {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    z-index: 100;
+}
+
+.navbarElement_icon {
+    width: 45px !important;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 8px;
+    position: relative;
+    top: 13px;
+}
+
+.navbarElement_title {
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    line-height: 45px;
+    width: 150px;
+}
