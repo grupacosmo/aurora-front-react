@@ -5,21 +5,34 @@
     right: 0;
     color: white;
     z-index: 100;
+    text-align: right;
 }
 
 .navbarElement_icon {
+    top: -1.5px;
+    position: relative;
+    display: inline-block;
     width: 45px !important;
     height: 45px;
     box-sizing: border-box;
     padding: 8px;
-    position: relative;
-    top: 13px;
 }
 
 .navbarElement_title {
     font-size: 20px;
     text-align: center;
     display: inline-block;
+    height: 45px;
     line-height: 45px;
+    width: 0;
+    transition: width;
+    transition-duration: 0.5s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navbarElement:hover > .navbarElement_title {
     width: 150px;
+    transition: width;
+    transition-duration: 0.5s;
 }
