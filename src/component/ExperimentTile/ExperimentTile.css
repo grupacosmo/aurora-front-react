@@ -1,0 +1,58 @@
+#tileContainer {
+    text-align: center;
+    padding: 50px;
+    transition: background-color 0.4s, box-shadow 0.4s, -webkit-box-shadow 0.4s, -moz-box-shadow 0.4s;
+}
+
+#tileContainer:hover {
+    background-color: white;
+    -webkit-box-shadow: 14px 14px 25px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 14px 14px 25px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 14px 14px 25px 0px rgba(0, 0, 0, 0.35);
+}
+
+#tileContainer p {
+    font-size: 14px;
+}
+
+.TitleTile{
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.icon{
+    font-size: 80px;
+    color: #22267b;
+}
+
+@media (max-width: 400px) {
+    .TitleTile{
+        font-size: 25px;
+    }
+
+    #tileContainer p{
+        font-size: 12px;
+    }
+
+    .icon{
+        font-size: 60px;
+        color: #22267b;
+    }
+}
+
+@media (max-width: 350px) {
+    .TitleTile{
+        font-size: 18px;
+    }
+
+    #tileContainer p{
+        font-size: 12px;
+    }
+
+    .icon{
+        font-size: 50px;
+        color: #22267b;
+    }
+}
