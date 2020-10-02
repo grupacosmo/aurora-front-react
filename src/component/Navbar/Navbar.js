@@ -15,7 +15,8 @@ export default function Navbar(props) {
     <Row className="navbar" align="middle">
       <Col span={24}>
         {
-          navbarElements.map(item => <NavbarElement title={item.title} icon={item.icon} key={item.id}/>)
+          navbarElements.map(item => <NavbarElement title={item.title} icon={item.icon} target={item.target}
+                                                    color={item.color} key={item.id}/>)
         }
       </Col>
     </Row>

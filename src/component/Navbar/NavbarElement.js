@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import "./style.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
@@ -19,17 +19,40 @@ function toCssRgb(color) {
 }
 
 export default function NavbarElement(props) {
+  const {title, icon, target, color} = props
+  const lighterColor = getLighterColor(color);
+
   const defaultColor = [89, 89, 89];
   const defaultColorLighter = getLighterColor(defaultColor);
 
-  // todo scroll event
-  // todo check if between top and bottom of section
-  // todo toRef
+  const navbarElement = useRef();
 
-  const {title, icon} = props
+  const refreshNavbarColors = (container, navbarElement) => {
+    const position = window.scrollY + 100;
+    const top = container.offsetTop;
+    const bottom = top + container.offsetHeight;
+
+    if (position >= top && position < bottom) {
+      navbarElement.current.querySelector(".navbarElement_icon").style.background = toCssRgb(color);
+      navbarElement.current.querySelector(".navbarElement_title").style.background = toCssRgb(lighterColor);
+    }
+    else {
+      navbarElement.current.querySelector(".navbarElement_icon").style.background = toCssRgb(defaultColor);
+      navbarElement.current.querySelector(".navbarElement_title").style.background = toCssRgb(defaultColorLighter);
+    }
+  }
+
+  useEffect(() => {
+    const container = document.querySelector(target);
+    refreshNavbarColors(container, navbarElement);
+
+    window.addEventListener('scroll', function(e) {
+      refreshNavbarColors(container, navbarElement);
+    });
+  });
 
   return (
-    <div className="navbarElement">
+    <div ref={navbarElement} className="navbarElement">
       <div className="navbarElement_icon" style={{background: toCssRgb(defaultColor)}}>
         <FontAwesomeIcon icon={icon} style={{width: "100%", height: "100%", display: "block"}}/>
       </div>
