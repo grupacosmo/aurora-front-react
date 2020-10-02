@@ -26,11 +26,13 @@ export default function NavbarElement(props) {
   // todo check if between top and bottom of section
   // todo toRef
 
-  const {title, icon} = props;
+  const {title, icon} = props
 
   return (
     <div className="navbarElement">
-      <FontAwesomeIcon className="navbarElement_icon" icon={icon} style={{background: toCssRgb(defaultColor)}}/>
+      <div className="navbarElement_icon" style={{background: toCssRgb(defaultColor)}}>
+        <FontAwesomeIcon icon={icon} style={{width: "100%", height: "100%", display: "block"}}/>
+      </div>
       <div className="navbarElement_title" style={{background: toCssRgb(defaultColorLighter)}}>{title}</div>
     </div>
   );

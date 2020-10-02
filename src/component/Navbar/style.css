@@ -1,6 +1,6 @@
 .navbar {
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     color: white;
@@ -8,9 +8,11 @@
     text-align: right;
 }
 
+.navbarElement {
+    height: 45px;
+}
+
 .navbarElement_icon {
-    top: -1.5px;
-    position: relative;
     display: inline-block;
     width: 45px !important;
     height: 45px;
