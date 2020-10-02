@@ -22,6 +22,10 @@ export default function NavbarElement(props) {
   const defaultColor = [89, 89, 89];
   const defaultColorLighter = getLighterColor(defaultColor);
 
+  // todo scroll event
+  // todo check if between top and bottom of section
+  // todo toRef
+
   const {title, icon} = props;
 
   return (

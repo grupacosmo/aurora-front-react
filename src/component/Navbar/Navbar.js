@@ -7,8 +7,8 @@ import {faHome, faRocket} from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar(props) {
   const navbarElements = [
-    {title: "Home", icon: faHome},
-    {title: "Eksperyment", icon: faRocket}
+    {title: "Home", color: [24, 144, 255], icon: faHome, target: "#homeSection"},
+    {title: "Eksperyment", color: [34, 38, 123], icon: faRocket, target: "#mainDiv"} // todo id should be different
   ]
 
   return (
