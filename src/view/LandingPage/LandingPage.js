@@ -1,12 +1,14 @@
 import React from 'react';
 import HomeSection from "../../section/HomeSection/HomeSection";
 import Experiment from "../../section/Experiment/Experiment";
+import IntroductionSection from "../../section/IntroductionSection/IntroductionSection";
 
 function LandingPage() {
     return (
         <>
-            <HomeSection/>
-            <Experiment/>
+            {/*<HomeSection/>*/}
+            {/*<Experiment/>*/}
+            <IntroductionSection />
         </>
     );
 }
