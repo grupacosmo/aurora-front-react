@@ -10,9 +10,11 @@
 
 .navbarElement {
     height: 45px;
+    cursor: pointer;
 }
 
 .navbarElement_icon {
+    border-radius: 5px 0 0 5px;
     display: inline-block;
     width: 45px !important;
     height: 45px;
@@ -20,6 +22,7 @@
     padding: 8px;
     transition: background;
     transition-duration: 0.3s;
+    margin-right: -0.2px;
 }
 
 .navbarElement_title {

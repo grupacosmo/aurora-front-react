@@ -14,8 +14,8 @@ function getLighterColor(color) {
 }
 
 
-function toCssRgb(color) {
-  return `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+function toCssRgb(color, opacity=1) {
+  return `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${opacity})`;
 }
 
 export default function NavbarElement(props) {
@@ -26,19 +26,20 @@ export default function NavbarElement(props) {
   const defaultColorLighter = getLighterColor(defaultColor);
 
   const navbarElement = useRef();
+  const opacity = 0.8;
 
   const refreshNavbarColors = (container, navbarElement) => {
-    const position = window.scrollY + 100;
     const top = container.offsetTop;
     const bottom = top + container.offsetHeight;
+    const position = window.scrollY + window.innerHeight / 2;
 
     if (position >= top && position < bottom) {
-      navbarElement.current.querySelector(".navbarElement_icon").style.background = toCssRgb(color);
-      navbarElement.current.querySelector(".navbarElement_title").style.background = toCssRgb(lighterColor);
+      navbarElement.current.querySelector(".navbarElement_icon").style.background = toCssRgb(color, opacity);
+      navbarElement.current.querySelector(".navbarElement_title").style.background = toCssRgb(lighterColor, opacity);
     }
     else {
-      navbarElement.current.querySelector(".navbarElement_icon").style.background = toCssRgb(defaultColor);
-      navbarElement.current.querySelector(".navbarElement_title").style.background = toCssRgb(defaultColorLighter);
+      navbarElement.current.querySelector(".navbarElement_icon").style.background = toCssRgb(defaultColor, opacity);
+      navbarElement.current.querySelector(".navbarElement_title").style.background = toCssRgb(defaultColorLighter, opacity);
     }
   }
 
