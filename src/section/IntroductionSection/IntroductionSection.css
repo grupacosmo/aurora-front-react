@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
 #IntroSection {
     position: relative;
 }
@@ -25,11 +27,13 @@
 }
 
 #ContentContainer {
+    position: absolute;
     text-align: center;
+    margin-top: 200px;
 }
 
 #ContentContainer h1 {
-    font-size: 80px;
+    font-size: 100px;
     text-transform: uppercase;
     color: white;
 }
@@ -39,7 +43,17 @@
     color: white;
 }
 
-.IntroIcon{
+.IntroIcon {
     font-size: 100px;
     color: yellow;
+    margin-top: 250px;
+    animation-name: arrowVerticalMovement;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowVerticalMovement {
+    0% {transform: translate(0, 20px)}
+    50% {transform: translate(0, 0)}
+    100% {transform: translate(0, 20px)}
 }

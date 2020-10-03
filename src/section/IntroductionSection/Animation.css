@@ -1,0 +1,9 @@
+.photoFadeOut{
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.photoFadeIn{
+    opacity: 1;
+    transition: opacity 1s;
+}
