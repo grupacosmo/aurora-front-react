@@ -19,7 +19,7 @@ function toCssRgb(color, opacity=1) {
   return `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${opacity})`;
 }
 
-export default function NavbarElement(props) {
+export default function SideNavbarElement(props) {
   const {title, icon, target, color} = props
   const lighterColor = getLighterColor(color);
 
@@ -48,9 +48,7 @@ export default function NavbarElement(props) {
     const container = document.querySelector(`#${target}`);
     refreshNavbarColors(container, navbarElement);
 
-    window.addEventListener('scroll', function(e) {
-      refreshNavbarColors(container, navbarElement);
-    });
+    window.addEventListener('scroll', () => refreshNavbarColors(container, navbarElement));
   });
 
   return (
