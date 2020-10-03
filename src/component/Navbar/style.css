@@ -8,6 +8,10 @@
     text-align: right;
 }
 
+.navbar a {
+    color: white;
+}
+
 .navbarElement {
     height: 45px;
     cursor: pointer;

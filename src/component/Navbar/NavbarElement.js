@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import "./style.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {Link} from 'react-scroll'
 
 const colorStep = 25;
 function getLighterColor(color) {
@@ -44,7 +45,7 @@ export default function NavbarElement(props) {
   }
 
   useEffect(() => {
-    const container = document.querySelector(target);
+    const container = document.querySelector(`#${target}`);
     refreshNavbarColors(container, navbarElement);
 
     window.addEventListener('scroll', function(e) {
@@ -53,11 +54,18 @@ export default function NavbarElement(props) {
   });
 
   return (
-    <div ref={navbarElement} className="navbarElement">
-      <div className="navbarElement_icon" style={{background: toCssRgb(defaultColor)}}>
-        <FontAwesomeIcon icon={icon} style={{width: "100%", height: "100%", display: "block"}}/>
+    <Link
+      to={target}
+      spy={true}
+      smooth={true}
+      duration={500}
+    >
+      <div ref={navbarElement} className="navbarElement">
+        <div className="navbarElement_icon" style={{background: toCssRgb(defaultColor)}}>
+          <FontAwesomeIcon icon={icon} style={{width: "100%", height: "100%", display: "block"}}/>
+        </div>
+        <div className="navbarElement_title" style={{background: toCssRgb(defaultColorLighter)}}>{title}</div>
       </div>
-      <div className="navbarElement_title" style={{background: toCssRgb(defaultColorLighter)}}>{title}</div>
-    </div>
+    </Link>
   );
 }
