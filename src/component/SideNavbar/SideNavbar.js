@@ -10,8 +10,15 @@ export default function SideNavbar(props) {
     <Row className="navbar" align="middle">
       <Col span={24}>
         {
-          navbarLinks.map(item => <SideNavbarElement title={item.title} icon={item.icon} target={item.target}
-                                                        color={item.color} key={item.id}/>)
+          navbarLinks.map(link =>
+            <SideNavbarElement
+              title={link.title}
+              icon={link.icon}
+              target={link.target}
+              color={link.color}
+              key={link.id}
+            />
+          )
         }
       </Col>
     </Row>

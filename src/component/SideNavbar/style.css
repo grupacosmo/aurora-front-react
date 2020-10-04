@@ -1,45 +1,48 @@
 .navbar {
-    height: 100%;
     position: fixed;
     top: 0;
     right: 0;
-    color: white;
+    height: 100%;
     z-index: 100;
     text-align: right;
 }
 
-.navbar a {
+.navbar, .navbar a {
     color: white;
 }
 
 .navbarElement {
-    height: 45px;
     cursor: pointer;
 }
 
+.navbarElement, .navbarElement_icon, .navbarElement_title {
+    height: 45px;
+}
+
 .navbarElement_icon {
-    border-radius: 5px 0 0 5px;
     display: inline-block;
     width: 45px !important;
-    height: 45px;
+    border-radius: 5px 0 0 5px;
     box-sizing: border-box;
     padding: 8px;
+    margin-right: -0.2px;
+
     transition: background;
     transition-duration: 0.3s;
-    margin-right: -0.2px;
 }
 
 .navbarElement_title {
+    display: inline-block;
+    width: 0;
+
     font-size: 20px;
     text-align: center;
-    display: inline-block;
-    height: 45px;
     line-height: 45px;
-    width: 0;
-    transition: width, background;
-    transition-duration: 0.5s, 0.3s;
     white-space: nowrap;
     overflow: hidden;
+
+    transition: width, background;
+    transition-duration: 0.5s, 0.3s;
 }
 
 .navbarElement:hover > a > .navbarElement_title {
