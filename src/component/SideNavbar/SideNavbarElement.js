@@ -20,13 +20,16 @@ export default function SideNavbarElement(props) {
     const bottom = top + container.offsetHeight;
     const position = window.scrollY + window.innerHeight / 2;
 
+    const iconElement = navbarElement.current.querySelector(".navbarElement_icon");
+    const titleElement = navbarElement.current.querySelector(".navbarElement_title");
+
     if (position >= top && position < bottom) {
-      navbarElement.current.querySelector(".navbarElement_icon").style.background = toCssRgba(color, opacity);
-      navbarElement.current.querySelector(".navbarElement_title").style.background = toCssRgba(lighterColor, opacity);
+      iconElement.style.background = toCssRgba(color, opacity);
+      titleElement.style.background = toCssRgba(lighterColor, opacity);
     }
     else {
-      navbarElement.current.querySelector(".navbarElement_icon").style.background = toCssRgba(defaultColor, opacity);
-      navbarElement.current.querySelector(".navbarElement_title").style.background = toCssRgba(defaultColorLighter, opacity);
+      iconElement.style.background = toCssRgba(defaultColor, opacity);
+      titleElement.style.background = toCssRgba(defaultColorLighter, opacity);
     }
   }
 
@@ -38,18 +41,19 @@ export default function SideNavbarElement(props) {
   });
 
   return (
-    <Link
-      to={target}
-      spy={true}
-      smooth={true}
-      duration={500}
-    >
       <div ref={navbarElement} className="navbarElement">
         <div className="navbarElement_icon" style={{background: toCssRgba(defaultColor)}}>
           <FontAwesomeIcon icon={icon} style={{width: "100%", height: "100%", display: "block"}}/>
         </div>
-        <div className="navbarElement_title" style={{background: toCssRgba(defaultColorLighter)}}>{title}</div>
+        <Link
+          to={target}
+          spy={true}
+          smooth={true}
+          duration={500}
+          activeClass=" "
+        >
+          <div className="navbarElement_title" style={{background: toCssRgba(defaultColorLighter)}}>{title}</div>
+        </Link>
       </div>
-    </Link>
   );
 }

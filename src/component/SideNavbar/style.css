@@ -36,14 +36,14 @@
     height: 45px;
     line-height: 45px;
     width: 0;
-    transition: width;
-    transition-duration: 0.5s;
+    transition: width, background;
+    transition-duration: 0.5s, 0.3s;
     white-space: nowrap;
     overflow: hidden;
 }
 
-.navbarElement:hover > .navbarElement_title {
+.navbarElement:hover > a > .navbarElement_title {
     width: 150px;
-    transition: width;
-    transition-duration: 0.5s;
+    transition: width, background;
+    transition-duration: 0.5s, 0.3s;
 }
