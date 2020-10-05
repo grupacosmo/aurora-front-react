@@ -1,0 +1,52 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 100;
+    text-align: right;
+}
+
+.navbar, .navbar a {
+    color: white;
+}
+
+.navbarElement {
+    cursor: pointer;
+}
+
+.navbarElement, .navbarElement_icon, .navbarElement_title {
+    height: 45px;
+}
+
+.navbarElement_icon {
+    display: inline-block;
+    width: 45px !important;
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-right: -0.2px;
+
+    transition: background;
+    transition-duration: 0.3s;
+}
+
+.navbarElement_title {
+    display: inline-block;
+    width: 0;
+
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    transition: width, background;
+    transition-duration: 0.5s, 0.3s;
+}
+
+.navbarElement:hover > a > .navbarElement_title {
+    width: 150px;
+    transition: width, background;
+    transition-duration: 0.5s, 0.3s;
+}
