@@ -5,12 +5,12 @@ h1, h2, h3, h4, h5, h6 {
     position: static;
 }
 
-#mainDiv {
+#experimentSection {
     background-color: #f8f8f8;
     font-family: 'Oswald', sans-serif;
 }
 
-#mainDiv p {
+#experimentSection p {
     text-align: center;
     font-size: 16px;
 }

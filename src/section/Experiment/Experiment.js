@@ -67,7 +67,7 @@ const Experiment = () => {
     }
 
     return (
-        <div id="mainDiv">
+        <div id="experimentSection">
             <div id="titleContainer" style={style} ref={myRef}>
                 <Row>
                     <Col span={24}>
