@@ -6,9 +6,9 @@ import IntroductionSection from "../../section/IntroductionSection/IntroductionS
 function LandingPage() {
     return (
         <>
-            {/*<HomeSection/>*/}
-            {/*<Experiment/>*/}
-            <IntroductionSection />
+            <HomeSection/>
+            <IntroductionSection target="mainDiv"/>
+            <Experiment/>
         </>
     );
 }
