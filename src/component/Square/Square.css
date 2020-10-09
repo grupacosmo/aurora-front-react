@@ -1,0 +1,55 @@
+.Square {
+    height: 100%;
+    width: 100%;
+    background: white;
+    opacity: 0.05;
+    clip-path: polygon(0% 0%, 0% 100%, 10% 100%, 10% 10%, 90% 10%, 90% 90%, 10% 89%, 10% 100%, 100% 100%, 100% 0%);
+    animation-name: squareAnimate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.SquareBox:nth-child(1) .Square {
+    animation-duration: 20s;
+}
+
+.SquareBox:nth-child(2) .Square {
+    animation-duration: 30s;
+}
+
+.SquareBox:nth-child(3) .Square {
+    animation-duration: 25s;
+}
+
+.SquareBox {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.SquareBox:nth-child(1) {
+    top: 50px;
+    right: 20px;
+    transform: scale(1, 1);
+}
+
+.SquareBox:nth-child(2) {
+    top: 700px;
+    left: 60px;
+    transform: scale(5, 5);
+}
+
+.SquareBox:nth-child(3) {
+    top: 650px;
+    right: 60px;
+    transform: scale(2.5, 2.5);
+}
+
+@keyframes squareAnimate {
+    0% {
+        transform: rotate(0.3turn);
+    }
+    100% {
+        transform: rotate(1.3turn);
+    }
+}

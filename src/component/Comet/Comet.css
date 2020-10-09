@@ -1,0 +1,135 @@
+.CometBox {
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    transform: rotate(0.4turn);
+}
+
+.CometBox:nth-child(1) {
+    top: 3%;
+    right: 3%;
+}
+
+.CometBox:nth-child(1) .Comet {
+    animation-delay: 500ms;
+}
+
+.CometBox:nth-child(1) .Comet:before, .CometBox:nth-child(1) .Comet:after {
+    animation-delay: 500ms;
+}
+
+.CometBox:nth-child(2) {
+    bottom: 10%;
+    right: 5%;
+}
+
+.CometBox:nth-child(2) .Comet {
+    animation-delay: 1300ms;
+}
+
+.CometBox:nth-child(2) .Comet:before, .CometBox:nth-child(2) .Comet:after {
+    animation-delay: 1300ms;
+}
+
+.CometBox:nth-child(3) {
+    top: 3%;
+    left: 7%;
+}
+
+.CometBox:nth-child(3) .Comet {
+    animation-delay: 3800ms;
+}
+
+.CometBox:nth-child(3) .Comet:before, .CometBox:nth-child(3) .Comet:after {
+    animation-delay: 3800ms;
+}
+
+
+.CometBox:nth-child(4) {
+    bottom: 15%;
+    left: 30%;
+}
+
+.CometBox:nth-child(4) .Comet {
+    animation-delay: 3200ms;
+}
+
+.CometBox:nth-child(4) .Comet:before, .CometBox:nth-child(4) .Comet:after {
+    animation-delay: 3200ms;
+}
+
+.CometBox:nth-child(5) {
+    top: 1%;
+    right: 50%;
+}
+
+.CometBox:nth-child(5) .Comet {
+    animation-delay: 2400ms;
+}
+
+.CometBox:nth-child(5) .Comet:before, .CometBox:nth-child(5) .Comet:after {
+    animation-delay: 2400ms;
+}
+
+
+.Comet {
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background: linear-gradient(-45deg, rgb(74, 128, 253), rgba(0, 0, 255, 0));
+    filter: drop-shadow(0px 0px 6px #12b0ee);
+    animation: tailAnimate 4s infinite, cometMove 4s infinite;
+}
+
+.Comet:before, .Comet:after {
+    content: '';
+    position: absolute;
+    left: calc(100% - 8px);
+    width: 0;
+    height: 2px;
+    background: rgb(74, 128, 253);
+    filter: drop-shadow(0px 0px 6px #12b0ee);
+    animation: headAnimate 4s infinite;
+}
+
+.Comet:before {
+    transform: rotate(-45deg);
+}
+
+.Comet:after {
+    transform: rotate(45deg);
+}
+
+
+@keyframes tailAnimate {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes headAnimate {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 16px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes cometMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(420px);
+    }
+}
