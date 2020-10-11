@@ -1,6 +1,8 @@
 import React from 'react';
 import HomeSection from "../../section/HomeSection/HomeSection";
 import Experiment from "../../section/Experiment/Experiment";
+import IntroductionSection from "../../section/IntroductionSection/IntroductionSection";
+
 import SideNavbar from "../../component/SideNavbar/SideNavbar";
 import {faHome, faRocket} from "@fortawesome/free-solid-svg-icons";
 
@@ -14,6 +16,7 @@ function LandingPage() {
       <>
           <SideNavbar navbarLinks={navbarLinks}/>
           <HomeSection/>
+          <IntroductionSection target="experimentSection"/>
           <Experiment/>
       </>
   );
