@@ -4,11 +4,13 @@ import './index.css';
 import LandingPage from './view/LandingPage/LandingPage';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
+import MapView from "./view/MapView/MapView";
 
 ReactDOM.render(
   <BrowserRouter>
     <div className="container">
       <Route exact path="/" component={LandingPage} />
+      <Route exact path="/Map" component={MapView} />
     </div>
   </BrowserRouter>,
   document.getElementById('root')
