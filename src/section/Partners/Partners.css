@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
+.partners {
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.partners hr {
+    width: 70%;
+    height: 1px;
+    border: none;
+    background: #1F1F1F;
+}
+
+.partners h1 {
+    color: #22267b;
+    font-size: 35px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.firstRow img {
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+.firstRow img:hover {
+    opacity: 0.7;
+}
+
+.secondRow img {
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+.secondRow img:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 500px) {
+    .partners h1 {
+        font-size: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .partners h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 545px) {
+    .firstRow img {
+        max-width: 60%;
+    }
+
+    .secondRow img {
+        max-width: 60%;
+    }
+
+    .balticLogo {
+        max-width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

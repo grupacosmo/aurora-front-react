@@ -103,9 +103,7 @@ function Footer() {
                         </div>
                     </div>
             </div>
-  
-            <div className="footer-bottom" style={{textAlign: "center", fontWeight: "lighter", fontSize: "16px"}}> Politechnika Krakowska 2020 ©.
-            </div>
+            <div className="footer-bottom" style={{textAlign: "center", fontWeight: "lighter", fontSize: "16px"}}> Politechnika Krakowska 2020 ©.</div>
         </div>
     </div>
 	)

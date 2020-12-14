@@ -22,8 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 #tilesContainer {
     margin-top: 50px;
     overflow: hidden;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px 25px 50px;
 }
 
 #title {

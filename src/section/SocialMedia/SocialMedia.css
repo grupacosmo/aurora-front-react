@@ -1,0 +1,95 @@
+body {
+    background-color: #1F1F1F;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0 25px;
+    padding-left: 0;
+}
+
+.list > li {
+    margin: 0 15px;
+}
+
+.list > li > a {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(40deg,#fa00ff,#5709ac,#0e38d1);
+    background-size: 300% 300%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 2.4;
+    border-radius: 100%;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.list > li > a:hover {
+    animation: gradient 3s ease infinite;
+    transform: scale(1.15);
+    color: #fff;
+}
+
+#mediaSection h1 {
+    text-align: center;
+    font-size: 21px;
+    color: #FAFAFA;
+    font-weight: lighter;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+#mediaSection hr {
+    width: 70px;
+    height: 1px;
+    border: none;
+    background: linear-gradient(40deg,#5709ac,#5709ac,#0e38d1);
+}
+
+@keyframes gradient {
+    70% {
+        background-position: 100% 0;
+    }
+}
+
+@media (max-width:800px) {
+    .list > li {
+        margin: 0 10px;
+    }
+
+    .list > li > a {
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+        line-height: 2.4;
+    }
+}
+
+@media (max-width:450px) {
+    .list > li {
+        flex: 0 0 32%;
+        max-width: 32%;
+        margin: 0 0 10px 0;
+    }
+
+    .list > li > a {
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+        line-height: 2.4;
+    }
+}
