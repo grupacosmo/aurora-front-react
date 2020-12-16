@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import LandingPage from './view/LandingPage/LandingPage';
+import Dashboard from './view/Dashboard/Dashboard';
+
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
 
@@ -9,6 +11,7 @@ ReactDOM.render(
   <BrowserRouter>
     <div className="container">
       <Route exact path="/" component={LandingPage} />
+      <Route exact path="/Dashboard" component={Dashboard} />
     </div>
   </BrowserRouter>,
   document.getElementById('root')
