@@ -19,7 +19,7 @@ function ChartTile(props) {
     ])
     
   return (
-    <Card style={{width: "100%", height:200}}>
+    <Card hoverable style={{width: "100%", height:200}}>
         <Meta title={title}/>
         <div style={{width: "100%", height: 150}}>
           <Chart data={chartData} axes={axes} tooltip/>
