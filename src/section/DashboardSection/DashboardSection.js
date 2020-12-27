@@ -44,24 +44,6 @@ class App extends Component{
                         label={this.state.chartTileConfig.label}
                         data={this.state.chartTileConfig.data}/>
                 </Col>
-                <Col span={12}>
-                    <ChartTile 
-                        title="Outside temperature"
-                        label={this.state.chartTileConfig.label}
-                        data={this.state.chartTileConfig.data}/>
-                </Col>
-                <Col span={12}>
-                    <ChartTile 
-                        title="Outside temperature"
-                        label={this.state.chartTileConfig.label}
-                        data={this.state.chartTileConfig.data}/>
-                </Col>
-                <Col span={24}>
-                    <ChartTile 
-                        title="Outside temperature"
-                        label={this.state.chartTileConfig.label}
-                        data={this.state.chartTileConfig.data}/>
-                </Col>
             </Row> 
         );
     }

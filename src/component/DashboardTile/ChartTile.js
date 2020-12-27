@@ -12,18 +12,16 @@ function ChartTile(props) {
         label: label,
         data: data
       }
-    ],[label, data])
+    ], [label, data])
     const axes = React.useMemo(()=>[
-      { primary: true, type: 'utc', position: 'bottom', show: true},
+      { primary: true, type: 'utc', position: 'bottom'},
       { type: 'linear', position: 'left' },
     ])
     
   return (
     <Card style={{width: "100%", height:200}}>
-        <Meta
-          title={title}
-        />
-        <div style={{margin: 10, width: "100%", height: 150}}>
+        <Meta title={title}/>
+        <div style={{width: "100%", height: 150}}>
           <Chart data={chartData} axes={axes} tooltip/>
         </div>
     </Card>

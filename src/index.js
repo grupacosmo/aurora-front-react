@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import LandingPage from './view/LandingPage/LandingPage';
 import Dashboard from './view/Dashboard/Dashboard';
-
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
 
